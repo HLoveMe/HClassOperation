@@ -1,14 +1,22 @@
 
   
- 1: HClassDocument\n
+ 1: HClassDocument
+ 
     在开发中对系统类或者第三方库，可以使用HClassDocument 对库文件进行分析\n
-  使用:\n
+  使用: 
+  
     ->打印Class的所有属性
+    
        +(void)scanProperty:(Class)clazz _super:(BOOL)hasSuper;
+       
     ->打印Class所有实例方法
+    
       +(void)scanInstanceMethod:(Class)clazz _super:(BOOL)hasSuper;
+      
     ->当布局子视图后，发现布局不对 使用其  打印所有层级关系
+    
       +(NSString *)scanSubView:(UIView *)_superView frame:(BOOL)frame;
+      
       
   2: HClassExtension    
     runtime 对Class进行动态操作 (增加方法，属性，交换实现)
