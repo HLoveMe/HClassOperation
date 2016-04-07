@@ -1,8 +1,8 @@
 
   
- 1: HClassDocument
-    在开发中对系统类或者第三方库，可以使用HClassDocument 对库文件进行分析
-  使用:
+ 1: HClassDocument\n
+    在开发中对系统类或者第三方库，可以使用HClassDocument 对库文件进行分析\n
+  使用:\n
     ->打印Class的所有属性
        +(void)scanProperty:(Class)clazz _super:(BOOL)hasSuper;
     ->打印Class所有实例方法
