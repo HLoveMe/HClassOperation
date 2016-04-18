@@ -13,6 +13,7 @@
 @property(nonatomic,assign)int age;
 @property(nonatomic,assign)double weight;
 @property(nonatomic,strong)NSArray *friends;
+@property(nonatomic,copy)NSString *NSRuss;
 -(void)methodA;
 -(void)methodB;
 @end

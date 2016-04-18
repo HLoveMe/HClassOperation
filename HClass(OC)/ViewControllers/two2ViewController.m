@@ -41,7 +41,7 @@
     for (NSTextCheckingResult *result in array) {
         NSRange range = result.range;
         [attStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range];
-        [attStr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:19] range:range];
+        [attStr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:15] range:range];
     }
     
     self.textView.attributedText = attStr;

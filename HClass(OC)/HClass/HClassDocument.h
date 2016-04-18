@@ -16,7 +16,7 @@
  */
 +(void)scanProperty:(Class)clazz _super:(BOOL)hasSuper;
 /**
- *  打印实例方法
+ *  打印实例方法 参数  只能得到  id Clazz SEL int double long float BOOL 这几个类型
  *
  *  @param clazz
  *  @param hasSuper 是否包含子类

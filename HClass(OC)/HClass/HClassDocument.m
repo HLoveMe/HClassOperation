@@ -38,7 +38,7 @@
 
 
 
- /**实例方法*/
+/**实例方法*/
 +(void)scanInstanceMethod:(Class)clazz _super:(BOOL)hasSuper{
     NSMutableArray *array = [NSMutableArray array];
     [HClassDocument scanInstanceMethod:clazz _super:hasSuper option:^(NSDictionary<NSString *,NSArray<NSString *> *> *dictionary) {
@@ -62,14 +62,43 @@
     NSMutableArray *array = [NSMutableArray array];
     for (int i=0; i<num; i++) {
         if (![HClassDocument containProperty:method_getName(methods[i]) clazz:clazz]) {
-            [array addObject:NSStringFromSelector(method_getName(methods[i]))];
+            NSMutableString *content = [NSMutableString stringWithString:@" - ("];
+            SEL aSele = method_getName(methods[i]);
+            NSString * aSelName = NSStringFromSelector(aSele);
+            const char *type = method_getTypeEncoding(class_getInstanceMethod(clazz, aSele));
+            NSString *typeEncode = [NSString stringWithUTF8String:type];
+            NSMutableString *typeStr= [NSMutableString string];
+            for (int j=0; j<typeEncode.length; j++) {
+                NSString *one = [typeEncode substringWithRange:NSMakeRange(j, 1)];
+                const char *oneChar = [one cStringUsingEncoding:4];
+                if (*oneChar<48||*oneChar>57) {
+                    [typeStr appendString:[NSString stringWithUTF8String:oneChar]];
+                }
+            }
+            for (int j=0; j<2; j++) {
+                [typeStr replaceCharactersInRange:NSMakeRange(1, 1) withString:@""];
+            }
+            NSString *returnType = [self getTypeName:[typeStr substringWithRange:NSMakeRange(0, 1)]];
+            [content appendFormat:@"%@)",returnType];
+            
+            if ([aSelName containsString:@":"]) {
+                NSMutableArray *temp  = [aSelName componentsSeparatedByString:@":"].mutableCopy;
+                [temp removeLastObject];
+                [temp enumerateObjectsUsingBlock:^(NSString *onePart, NSUInteger idx, BOOL * _Nonnull stop) {
+                    NSString *tempStr = [self getTypeName:[typeStr substringWithRange:NSMakeRange(idx+1, 1)]];;
+                    [content appendFormat:@"%@:(%@) propertyName",onePart,tempStr];
+                }];
+            }else{
+                [content appendFormat:@"%@",aSelName];
+            }
+            [array addObject:content];
         }
     }
     option(@{name:array});
 }
 
 
- /**打印所有子视图*/
+/**打印所有子视图*/
 static NSMutableString *content;
 +(NSString *)scanSubView:(UIView *)_superView frame:(BOOL)frame{
     content = [NSMutableString stringWithString:@"\n"];
@@ -87,7 +116,7 @@ static NSMutableString *content;
         [tt appendFormat:@"\t"];
     }
     if (frame) {
-       [tt appendFormat:@"%@(%@)",className,NSStringFromCGRect(_superView.frame)];
+        [tt appendFormat:@"%@(%@)",className,NSStringFromCGRect(_superView.frame)];
     }else{
         [tt appendFormat:@"%@",className];
     }
@@ -100,7 +129,7 @@ static NSMutableString *content;
     }];
     
 }
- /**去除属性的set  get 方法*/
+/**去除属性的set  get 方法*/
 +(BOOL)containProperty:(SEL)aSelector clazz:(Class)clazz{
     NSMutableArray *array = objc_getAssociatedObject([UIApplication sharedApplication], "property");
     if (!array) {
@@ -118,7 +147,7 @@ static NSMutableString *content;
         array = proName;
     }
     NSString *one = [NSStringFromSelector(aSelector) lowercaseString];
-     BOOL flag = [array containsObject:one];
+    BOOL flag = [array containsObject:one];
     return flag;
 }
 
@@ -138,10 +167,10 @@ static NSMutableString *content;
 +(NSString *)getPropertyDescription:(objc_property_t)pro{
     
     NSMutableString *string = [NSMutableString stringWithString:@"@property"];
- 
+    
     NSString *name = [[NSString alloc]initWithUTF8String:property_getName(pro)];
     NSString *allPro =[[NSString alloc]initWithUTF8String:property_getAttributes(pro)];
-//    NSLog(@"%@",allPro);
+    //    NSLog(@"%@",allPro);
     NSArray * a = [allPro componentsSeparatedByString:@","];
     NSMutableArray<NSString *> *array = [NSMutableArray array];
     if ([a containsObject:@"N"]) {

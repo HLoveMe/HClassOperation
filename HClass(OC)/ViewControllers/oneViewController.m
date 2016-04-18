@@ -16,7 +16,7 @@
 @implementation oneViewController
 -(NSMutableArray *)dataArray{
     if (nil==_dataArray) {
-   _dataArray=@[@"UIView",@"UIViewController",@"UIButton",@"NSURL",@"NSObject",@"NSString",@"NSURLRequest",@"NSURLSession",@"HInvocation"].mutableCopy;
+   _dataArray=@[@"UIView",@"UIViewController",@"UIButton",@"NSURL",@"NSObject",@"NSString",@"NSURLRequest",@"NSURLSession",@"HInvocation",@"TestModel"].mutableCopy;
     }
     return _dataArray;
 }
