@@ -78,7 +78,7 @@
             for (int j=0; j<2; j++) {
                 [typeStr replaceCharactersInRange:NSMakeRange(1, 1) withString:@""];
             }
-            NSString *returnType = [self getTypeName:[typeStr substringWithRange:NSMakeRange(0, 1)]];
+            NSString *returnType = [self getReturnType:[typeStr substringWithRange:NSMakeRange(0, 1)]];
             [content appendFormat:@"%@)",returnType];
             
             if ([aSelName containsString:@":"]) {
@@ -240,6 +240,30 @@ static NSMutableString *content;
     }
     return str;
 }
-
++(NSString *)getReturnType:(NSString *)oneChar{
+    NSString *str;
+    if ([oneChar containsString:@"B"]) {
+        str =@"BOOL";
+    }else if([oneChar containsString:@"q"]){
+        str = @"long";
+    }else if ([oneChar containsString:@"f"]){
+        str = @"float";
+    }else if ([oneChar containsString:@"i"]){
+        str = @"int";
+    }else if([oneChar containsString:@"d"]){
+        str = @"double";
+    }else if([oneChar containsString:@"Q"]){
+        str = @"NSUInteger";
+    }else if([oneChar containsString:@"#"]){
+        str = @"Class";
+    }else if([oneChar containsString:@":"]){
+        str = @"SEL";
+    }else if([oneChar containsString:@"v"]){
+        str = @"void";
+    }else{
+        str = @"id";
+    }
+    return  str;
+}
 @end
 

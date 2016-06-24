@@ -7,7 +7,7 @@
 //
 
 #import "HInstanceProxy.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 @interface HInstanceProxy()
 @property(nonatomic,strong)NSMutableDictionary<NSString *, NSInvocation *> *dictionary;
 @end

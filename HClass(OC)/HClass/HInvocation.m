@@ -28,7 +28,8 @@
     return self.invocation.selector;
 }
 - (void)getReturnValue:(void *)retLoc{
-    [self.invocation getReturnValue:retLoc];
+    if (self.methodSignature.methodReturnLength)
+        [self.invocation getReturnValue:retLoc];
 }
 - (void)setReturnValue:(void *)retLoc{
     [self.invocation setReturnValue:retLoc];

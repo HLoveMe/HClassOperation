@@ -5,7 +5,7 @@
 //
 
 #import "HClassExtension.h"
-#import  <objc/objc-runtime.h>
+#import  <objc/runtime.h>
 #import "HInvocation.h"
 
 @implementation HClassExtension
@@ -61,7 +61,7 @@
 +(HInvocation *)classAddInstanceMethod:(Class)targetClazz  sel:(SEL)aSel blockImpWithResult:(id(^)(id _self,id info))block{
     if (block==nil) {return nil;}
     IMP imp = imp_implementationWithBlock(block);
-    const char *type = "v@:@";
+    const char *type = "@@:@";
     class_addMethod(targetClazz, aSel, imp, type);
     NSMethodSignature *method = [NSMethodSignature signatureWithObjCTypes:type];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:method];
