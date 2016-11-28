@@ -8,14 +8,15 @@
 
 
 #import "ViewController.h"
+#import "HGClass.h"
 #import "oneViewController.h"
 #import "twoViewController.h"
 #import "thereViewController.h"
 #import "fourViewController.h"
-#import "fiveViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,assign)int age;
 @end
 
 @implementation ViewController
@@ -38,6 +39,20 @@
     [super viewDidLoad];
     self.title = @"HClass";
     [self.view addSubview:self.tableView];
+    
+    [self startPropertyListenProName:@"age" withChange:^(id target) {
+        
+    }];
+    self.age = 1;
+    
+    [self startMethodListen:@selector(ABCD:) befor:nil after:^{
+        
+    }];
+    [self ABCD:@(100)];
+    
+}
+-(void)ABCD:(NSNumber *)num{
+    NSLog(@"=%@=",num);
 }
 #pragma -mark TableView代理
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -77,9 +92,6 @@
             break;
         case 3:
             [self.navigationController pushViewController:[fourViewController new] animated:YES];
-            break;
-        case 4:
-            [self.navigationController pushViewController:[fiveViewController new] animated:YES];
             break;
         default:
             break;

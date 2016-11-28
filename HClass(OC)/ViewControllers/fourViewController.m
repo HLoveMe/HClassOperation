@@ -50,11 +50,12 @@
      /**方式一*/
     id result1 = [model performSelector:@selector(XXOO) withObject:@"hellow "];
     NSLog(@"%@",result1);
-     /**方式二*/
-    [self.invocation invokeWithTarget:model Object:@"你好"];
-    id result2;
-    [self.invocation getReturnValue:&result2];
-    NSLog(@"%@",result2);
+//     /**方式二*/
+//    [self.invocation invokeWithTarget:model Object:@"你好"];
+//    id result2;
+//    [self.invocation getReturnValue:&result2];
+//    NSLog(@"%@",result2);
+    
 }
 
 - (IBAction)insertProperty:(id)sender {

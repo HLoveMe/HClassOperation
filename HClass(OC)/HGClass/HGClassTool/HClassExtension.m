@@ -9,6 +9,9 @@
 #import "HInvocation.h"
 
 @implementation HClassExtension
+
+
+
 +(HInvocation *)classAddInstanceMethod:(Class)target  sel:(SEL)aSel imp:(IMP)implement{
     const char *type = "v@:";
     class_addMethod([target class], aSel, implement, type);

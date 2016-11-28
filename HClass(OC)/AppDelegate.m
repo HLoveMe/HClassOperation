@@ -7,16 +7,30 @@
 //
 
 #import "AppDelegate.h"
-
+#import "HInvocation.h"
+#import <objc/runtime.h>
+#import "NSObject+HAdd.h"
+#import "HClassDocument.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+-(id)dothing:(int)one a:(CGRect)two b:(int)there{
 
+    return @(1000);
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSLog(@"%@",[NSString stringWithUTF8String:@encode(BOOL)]);
+    
+    NSMethodSignature *sing = [self methodSignatureForSelector:@selector(dothing:a:b:)];
+
+    
+    [self performSelectorWithPars:@selector(dothing:a:b:),1,CGRectZero,1];
+    [HClassDocument scanInstanceMethod:[NSMethodSignature class] _super:NO];
+    
     return YES;
 }
 

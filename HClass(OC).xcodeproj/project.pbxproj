@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DB497FC71CB601EA00DF23E3 /* UITableView+HTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DB497FC61CB601EA00DF23E3 /* UITableView+HTable.m */; };
-		DB497FCA1CB603E200DF23E3 /* fiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB497FC91CB603E200DF23E3 /* fiveViewController.m */; };
-		DB497FCC1CB6047700DF23E3 /* fiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB497FCB1CB6047700DF23E3 /* fiveViewController.xib */; };
+		DB74210B1DEC817C00501C32 /* HGMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7420FD1DEC817C00501C32 /* HGMethod.m */; };
+		DB74210C1DEC817C00501C32 /* HGProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7420FF1DEC817C00501C32 /* HGProperty.m */; };
+		DB74210E1DEC817C00501C32 /* NSObject+HAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7421031DEC817C00501C32 /* NSObject+HAdd.m */; };
+		DB74210F1DEC817C00501C32 /* NSObject+Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7421051DEC817C00501C32 /* NSObject+Proxy.m */; };
+		DB7421101DEC817C00501C32 /* HClassDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7421081DEC817C00501C32 /* HClassDocument.m */; };
+		DB7421111DEC817C00501C32 /* HClassExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB74210A1DEC817C00501C32 /* HClassExtension.m */; };
+		DB7421141DEC81D700501C32 /* HInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7421131DEC81D700501C32 /* HInvocation.m */; };
 		DB98F8A51CB5448D008C4A09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8A41CB5448D008C4A09 /* main.m */; };
 		DB98F8A81CB5448D008C4A09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8A71CB5448D008C4A09 /* AppDelegate.m */; };
 		DB98F8AE1CB5448D008C4A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB98F8AC1CB5448D008C4A09 /* Main.storyboard */; };
@@ -18,10 +23,6 @@
 		DB98F8BE1CB5448D008C4A09 /* HClass_OC_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8BD1CB5448D008C4A09 /* HClass_OC_Tests.m */; };
 		DB98F8C91CB5448D008C4A09 /* HClass_OC_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8C81CB5448D008C4A09 /* HClass_OC_UITests.m */; };
 		DB98F8D81CB544CB008C4A09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8D71CB544CB008C4A09 /* ViewController.m */; };
-		DB98F8E01CB544F0008C4A09 /* HClassDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8DB1CB544F0008C4A09 /* HClassDocument.m */; };
-		DB98F8E11CB544F0008C4A09 /* HClassExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8DD1CB544F0008C4A09 /* HClassExtension.m */; };
-		DB98F8E21CB544F0008C4A09 /* HInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8DF1CB544F0008C4A09 /* HInvocation.m */; };
-		DB98F8E61CB544F8008C4A09 /* HInstanceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8E51CB544F8008C4A09 /* HInstanceProxy.m */; };
 		DB98F8F01CB54520008C4A09 /* one2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8E91CB54520008C4A09 /* one2ViewController.m */; };
 		DB98F8F11CB54520008C4A09 /* oneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8EB1CB54520008C4A09 /* oneViewController.m */; };
 		DB98F8F21CB54520008C4A09 /* thereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8ED1CB54520008C4A09 /* thereViewController.m */; };
@@ -53,9 +54,21 @@
 /* Begin PBXFileReference section */
 		DB497FC51CB601EA00DF23E3 /* UITableView+HTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HTable.h"; sourceTree = "<group>"; };
 		DB497FC61CB601EA00DF23E3 /* UITableView+HTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HTable.m"; sourceTree = "<group>"; };
-		DB497FC81CB603E200DF23E3 /* fiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fiveViewController.h; sourceTree = "<group>"; };
-		DB497FC91CB603E200DF23E3 /* fiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fiveViewController.m; sourceTree = "<group>"; };
-		DB497FCB1CB6047700DF23E3 /* fiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fiveViewController.xib; sourceTree = "<group>"; };
+		DB7420FA1DEC817C00501C32 /* HGClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGClass.h; sourceTree = "<group>"; };
+		DB7420FC1DEC817C00501C32 /* HGMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMethod.h; sourceTree = "<group>"; };
+		DB7420FD1DEC817C00501C32 /* HGMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMethod.m; sourceTree = "<group>"; };
+		DB7420FE1DEC817C00501C32 /* HGProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGProperty.h; sourceTree = "<group>"; };
+		DB7420FF1DEC817C00501C32 /* HGProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGProperty.m; sourceTree = "<group>"; };
+		DB7421021DEC817C00501C32 /* NSObject+HAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HAdd.h"; sourceTree = "<group>"; };
+		DB7421031DEC817C00501C32 /* NSObject+HAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HAdd.m"; sourceTree = "<group>"; };
+		DB7421041DEC817C00501C32 /* NSObject+Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Proxy.h"; sourceTree = "<group>"; };
+		DB7421051DEC817C00501C32 /* NSObject+Proxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Proxy.m"; sourceTree = "<group>"; };
+		DB7421071DEC817C00501C32 /* HClassDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HClassDocument.h; sourceTree = "<group>"; };
+		DB7421081DEC817C00501C32 /* HClassDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HClassDocument.m; sourceTree = "<group>"; };
+		DB7421091DEC817C00501C32 /* HClassExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HClassExtension.h; sourceTree = "<group>"; };
+		DB74210A1DEC817C00501C32 /* HClassExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HClassExtension.m; sourceTree = "<group>"; };
+		DB7421121DEC81D700501C32 /* HInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HInvocation.h; sourceTree = "<group>"; };
+		DB7421131DEC81D700501C32 /* HInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HInvocation.m; sourceTree = "<group>"; };
 		DB98F8A01CB5448D008C4A09 /* HClass(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HClass(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB98F8A41CB5448D008C4A09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB98F8A61CB5448D008C4A09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,14 +85,6 @@
 		DB98F8CA1CB5448D008C4A09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB98F8D61CB544CB008C4A09 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DB98F8D71CB544CB008C4A09 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DB98F8DA1CB544F0008C4A09 /* HClassDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HClassDocument.h; sourceTree = "<group>"; };
-		DB98F8DB1CB544F0008C4A09 /* HClassDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HClassDocument.m; sourceTree = "<group>"; };
-		DB98F8DC1CB544F0008C4A09 /* HClassExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HClassExtension.h; sourceTree = "<group>"; };
-		DB98F8DD1CB544F0008C4A09 /* HClassExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HClassExtension.m; sourceTree = "<group>"; };
-		DB98F8DE1CB544F0008C4A09 /* HInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HInvocation.h; sourceTree = "<group>"; };
-		DB98F8DF1CB544F0008C4A09 /* HInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HInvocation.m; sourceTree = "<group>"; };
-		DB98F8E41CB544F8008C4A09 /* HInstanceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HInstanceProxy.h; sourceTree = "<group>"; };
-		DB98F8E51CB544F8008C4A09 /* HInstanceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HInstanceProxy.m; sourceTree = "<group>"; };
 		DB98F8E81CB54520008C4A09 /* one2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = one2ViewController.h; sourceTree = "<group>"; };
 		DB98F8E91CB54520008C4A09 /* one2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = one2ViewController.m; sourceTree = "<group>"; };
 		DB98F8EA1CB54520008C4A09 /* oneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneViewController.h; sourceTree = "<group>"; };
@@ -132,6 +137,44 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		DB7420F91DEC817C00501C32 /* HGClass */ = {
+			isa = PBXGroup;
+			children = (
+				DB7420FA1DEC817C00501C32 /* HGClass.h */,
+				DB7420FB1DEC817C00501C32 /* HGClass_Extension */,
+				DB7421061DEC817C00501C32 /* HGClassTool */,
+			);
+			path = HGClass;
+			sourceTree = "<group>";
+		};
+		DB7420FB1DEC817C00501C32 /* HGClass_Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB7420FC1DEC817C00501C32 /* HGMethod.h */,
+				DB7420FD1DEC817C00501C32 /* HGMethod.m */,
+				DB7420FE1DEC817C00501C32 /* HGProperty.h */,
+				DB7420FF1DEC817C00501C32 /* HGProperty.m */,
+				DB7421021DEC817C00501C32 /* NSObject+HAdd.h */,
+				DB7421031DEC817C00501C32 /* NSObject+HAdd.m */,
+				DB7421041DEC817C00501C32 /* NSObject+Proxy.h */,
+				DB7421051DEC817C00501C32 /* NSObject+Proxy.m */,
+			);
+			path = HGClass_Extension;
+			sourceTree = "<group>";
+		};
+		DB7421061DEC817C00501C32 /* HGClassTool */ = {
+			isa = PBXGroup;
+			children = (
+				DB7421071DEC817C00501C32 /* HClassDocument.h */,
+				DB7421081DEC817C00501C32 /* HClassDocument.m */,
+				DB7421121DEC81D700501C32 /* HInvocation.h */,
+				DB7421131DEC81D700501C32 /* HInvocation.m */,
+				DB7421091DEC817C00501C32 /* HClassExtension.h */,
+				DB74210A1DEC817C00501C32 /* HClassExtension.m */,
+			);
+			path = HGClassTool;
+			sourceTree = "<group>";
+		};
 		DB98F8971CB5448D008C4A09 = {
 			isa = PBXGroup;
 			children = (
@@ -161,10 +204,9 @@
 				DB98F8D71CB544CB008C4A09 /* ViewController.m */,
 				DBEFE2B31CB5ED8100465CAC /* TestModel.h */,
 				DBEFE2B41CB5ED8100465CAC /* TestModel.m */,
+				DB7420F91DEC817C00501C32 /* HGClass */,
 				DB497FC11CB5FD5100DF23E3 /* View */,
 				DB98F8E71CB54520008C4A09 /* ViewControllers */,
-				DB98F8E31CB544F8008C4A09 /* NSProxy */,
-				DB98F8D91CB544F0008C4A09 /* HClass */,
 				DB98F8AC1CB5448D008C4A09 /* Main.storyboard */,
 				DB98F8AF1CB5448D008C4A09 /* Assets.xcassets */,
 				DB98F8B11CB5448D008C4A09 /* LaunchScreen.storyboard */,
@@ -200,28 +242,6 @@
 			path = "HClass(OC)UITests";
 			sourceTree = "<group>";
 		};
-		DB98F8D91CB544F0008C4A09 /* HClass */ = {
-			isa = PBXGroup;
-			children = (
-				DB98F8DA1CB544F0008C4A09 /* HClassDocument.h */,
-				DB98F8DB1CB544F0008C4A09 /* HClassDocument.m */,
-				DB98F8DC1CB544F0008C4A09 /* HClassExtension.h */,
-				DB98F8DD1CB544F0008C4A09 /* HClassExtension.m */,
-				DB98F8DE1CB544F0008C4A09 /* HInvocation.h */,
-				DB98F8DF1CB544F0008C4A09 /* HInvocation.m */,
-			);
-			path = HClass;
-			sourceTree = "<group>";
-		};
-		DB98F8E31CB544F8008C4A09 /* NSProxy */ = {
-			isa = PBXGroup;
-			children = (
-				DB98F8E41CB544F8008C4A09 /* HInstanceProxy.h */,
-				DB98F8E51CB544F8008C4A09 /* HInstanceProxy.m */,
-			);
-			path = NSProxy;
-			sourceTree = "<group>";
-		};
 		DB98F8E71CB54520008C4A09 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,9 +259,6 @@
 				DBEFE2B01CB5ED3000465CAC /* fourViewController.h */,
 				DBEFE2B11CB5ED3000465CAC /* fourViewController.m */,
 				DBEFE2B61CB5F01C00465CAC /* fourViewController.xib */,
-				DB497FC81CB603E200DF23E3 /* fiveViewController.h */,
-				DB497FC91CB603E200DF23E3 /* fiveViewController.m */,
-				DB497FCB1CB6047700DF23E3 /* fiveViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,7 +330,8 @@
 				TargetAttributes = {
 					DB98F89F1CB5448D008C4A09 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = WM4LTQ3CNK;
+						DevelopmentTeam = KJ2S48C9J9;
+						ProvisioningStyle = Automatic;
 					};
 					DB98F8B81CB5448D008C4A09 = {
 						CreatedOnToolsVersion = 7.3;
@@ -356,7 +374,6 @@
 				DB98F8B31CB5448D008C4A09 /* LaunchScreen.storyboard in Resources */,
 				DB98F8B01CB5448D008C4A09 /* Assets.xcassets in Resources */,
 				DB98F8AE1CB5448D008C4A09 /* Main.storyboard in Resources */,
-				DB497FCC1CB6047700DF23E3 /* fiveViewController.xib in Resources */,
 				DB98F8F81CB54B0F008C4A09 /* thereViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,19 +399,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB98F8E01CB544F0008C4A09 /* HClassDocument.m in Sources */,
+				DB74210F1DEC817C00501C32 /* NSObject+Proxy.m in Sources */,
+				DB7421111DEC817C00501C32 /* HClassExtension.m in Sources */,
 				DB98F8F21CB54520008C4A09 /* thereViewController.m in Sources */,
 				DB98F8D81CB544CB008C4A09 /* ViewController.m in Sources */,
 				DBEFE2B21CB5ED3000465CAC /* fourViewController.m in Sources */,
 				DB98F8F01CB54520008C4A09 /* one2ViewController.m in Sources */,
+				DB74210E1DEC817C00501C32 /* NSObject+HAdd.m in Sources */,
+				DB74210C1DEC817C00501C32 /* HGProperty.m in Sources */,
 				DBEFE2B51CB5ED8100465CAC /* TestModel.m in Sources */,
-				DB98F8E61CB544F8008C4A09 /* HInstanceProxy.m in Sources */,
-				DB98F8E21CB544F0008C4A09 /* HInvocation.m in Sources */,
-				DB497FCA1CB603E200DF23E3 /* fiveViewController.m in Sources */,
+				DB74210B1DEC817C00501C32 /* HGMethod.m in Sources */,
 				DB98F8F31CB54520008C4A09 /* twoViewController.m in Sources */,
 				DB98F8A81CB5448D008C4A09 /* AppDelegate.m in Sources */,
 				DB497FC71CB601EA00DF23E3 /* UITableView+HTable.m in Sources */,
-				DB98F8E11CB544F0008C4A09 /* HClassExtension.m in Sources */,
+				DB7421101DEC817C00501C32 /* HClassDocument.m in Sources */,
+				DB7421141DEC81D700501C32 /* HInvocation.m in Sources */,
 				DB98F8A51CB5448D008C4A09 /* main.m in Sources */,
 				DB98F8F61CB549CA008C4A09 /* two2ViewController.m in Sources */,
 				DB98F8F11CB54520008C4A09 /* oneViewController.m in Sources */,
@@ -539,7 +558,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yibing Zhang (2BG7BE76P7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KJ2S48C9J9;
 				INFOPLIST_FILE = "HClass(OC)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,7 +573,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yibing Zhang (2BG7BE76P7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KJ2S48C9J9;
 				INFOPLIST_FILE = "HClass(OC)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
