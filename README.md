@@ -41,8 +41,17 @@
       
       .....
       
-  3：HInstanceProxy
-  
-     代理类，消息转发机制
+    3:属性/ 方法 的监听 
+    [self startPropertyListenProName:@"age" withChange:^(id target) {
+
+    }];
+
+    self.age = 1;
+
+    [self startMethodListen:@selector(ABCD:) befor:nil after:^{
+
+    }];
+
+    [self ABCD:@(100)];
      
      

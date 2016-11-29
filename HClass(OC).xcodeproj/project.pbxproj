@@ -11,10 +11,10 @@
 		DB74210B1DEC817C00501C32 /* HGMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7420FD1DEC817C00501C32 /* HGMethod.m */; };
 		DB74210C1DEC817C00501C32 /* HGProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7420FF1DEC817C00501C32 /* HGProperty.m */; };
 		DB74210E1DEC817C00501C32 /* NSObject+HAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7421031DEC817C00501C32 /* NSObject+HAdd.m */; };
-		DB74210F1DEC817C00501C32 /* NSObject+Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7421051DEC817C00501C32 /* NSObject+Proxy.m */; };
 		DB7421101DEC817C00501C32 /* HClassDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7421081DEC817C00501C32 /* HClassDocument.m */; };
 		DB7421111DEC817C00501C32 /* HClassExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB74210A1DEC817C00501C32 /* HClassExtension.m */; };
 		DB7421141DEC81D700501C32 /* HInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7421131DEC81D700501C32 /* HInvocation.m */; };
+		DB74211E1DED284E00501C32 /* NSObject+Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB74211C1DED284E00501C32 /* NSObject+Proxy.m */; };
 		DB98F8A51CB5448D008C4A09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8A41CB5448D008C4A09 /* main.m */; };
 		DB98F8A81CB5448D008C4A09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98F8A71CB5448D008C4A09 /* AppDelegate.m */; };
 		DB98F8AE1CB5448D008C4A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB98F8AC1CB5448D008C4A09 /* Main.storyboard */; };
@@ -61,14 +61,14 @@
 		DB7420FF1DEC817C00501C32 /* HGProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGProperty.m; sourceTree = "<group>"; };
 		DB7421021DEC817C00501C32 /* NSObject+HAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HAdd.h"; sourceTree = "<group>"; };
 		DB7421031DEC817C00501C32 /* NSObject+HAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HAdd.m"; sourceTree = "<group>"; };
-		DB7421041DEC817C00501C32 /* NSObject+Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Proxy.h"; sourceTree = "<group>"; };
-		DB7421051DEC817C00501C32 /* NSObject+Proxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Proxy.m"; sourceTree = "<group>"; };
 		DB7421071DEC817C00501C32 /* HClassDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HClassDocument.h; sourceTree = "<group>"; };
 		DB7421081DEC817C00501C32 /* HClassDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HClassDocument.m; sourceTree = "<group>"; };
 		DB7421091DEC817C00501C32 /* HClassExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HClassExtension.h; sourceTree = "<group>"; };
 		DB74210A1DEC817C00501C32 /* HClassExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HClassExtension.m; sourceTree = "<group>"; };
 		DB7421121DEC81D700501C32 /* HInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HInvocation.h; sourceTree = "<group>"; };
 		DB7421131DEC81D700501C32 /* HInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HInvocation.m; sourceTree = "<group>"; };
+		DB74211C1DED284E00501C32 /* NSObject+Proxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Proxy.m"; sourceTree = "<group>"; };
+		DB74211D1DED284E00501C32 /* NSObject+Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Proxy.h"; sourceTree = "<group>"; };
 		DB98F8A01CB5448D008C4A09 /* HClass(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HClass(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB98F8A41CB5448D008C4A09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB98F8A61CB5448D008C4A09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 				DB7420FF1DEC817C00501C32 /* HGProperty.m */,
 				DB7421021DEC817C00501C32 /* NSObject+HAdd.h */,
 				DB7421031DEC817C00501C32 /* NSObject+HAdd.m */,
-				DB7421041DEC817C00501C32 /* NSObject+Proxy.h */,
-				DB7421051DEC817C00501C32 /* NSObject+Proxy.m */,
+				DB74211C1DED284E00501C32 /* NSObject+Proxy.m */,
+				DB74211D1DED284E00501C32 /* NSObject+Proxy.h */,
 			);
 			path = HGClass_Extension;
 			sourceTree = "<group>";
@@ -399,13 +399,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB74210F1DEC817C00501C32 /* NSObject+Proxy.m in Sources */,
 				DB7421111DEC817C00501C32 /* HClassExtension.m in Sources */,
 				DB98F8F21CB54520008C4A09 /* thereViewController.m in Sources */,
 				DB98F8D81CB544CB008C4A09 /* ViewController.m in Sources */,
 				DBEFE2B21CB5ED3000465CAC /* fourViewController.m in Sources */,
 				DB98F8F01CB54520008C4A09 /* one2ViewController.m in Sources */,
 				DB74210E1DEC817C00501C32 /* NSObject+HAdd.m in Sources */,
+				DB74211E1DED284E00501C32 /* NSObject+Proxy.m in Sources */,
 				DB74210C1DEC817C00501C32 /* HGProperty.m in Sources */,
 				DBEFE2B51CB5ED8100465CAC /* TestModel.m in Sources */,
 				DB74210B1DEC817C00501C32 /* HGMethod.m in Sources */,
