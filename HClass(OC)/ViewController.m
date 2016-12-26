@@ -48,11 +48,35 @@
     [self startMethodListen:@selector(ABCD:) befor:nil after:^{
         
     }];
-    [self ABCD:@(100)];
+    
+//
+    [self startMethodListen:@selector(A:) befor:^(NSArray *pars){
+        NSLog(@"before1");
+    } after:^{
+        NSLog(@"after1");
+    }];
+    [self startMethodListen:@selector(A:) befor:^(NSArray *pars){
+        NSLog(@"before2");
+    } after:^{
+        NSLog(@"after2");
+    }];
+    
+    [self startPropertyListenProName:@"age" withChange:^(id target) {
+        NSLog(@"property1");
+    }];
+    [self startPropertyListenProName:@"age" withChange:^(id target) {
+        NSLog(@"property2");
+    }];
+    [self A:@"AA"];
+    self.age=11;
     
 }
 -(void)ABCD:(NSNumber *)num{
     NSLog(@"=%@=",num);
+}
+-(NSString*)A:(NSString*)A{
+    NSLog(@"NSSTRING");
+    return @"ZZH";
 }
 #pragma -mark TableView代理
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

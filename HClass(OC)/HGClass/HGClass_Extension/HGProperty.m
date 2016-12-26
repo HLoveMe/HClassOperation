@@ -9,5 +9,13 @@
 #import "HGProperty.h"
 
 @implementation HGProperty
+-(NSMutableArray *)blocks{
+    if (nil==_blocks) {
+        _blocks=[NSMutableArray array];
+    }
+    return _blocks;
+}
+@end
+@implementation HP
 
 @end

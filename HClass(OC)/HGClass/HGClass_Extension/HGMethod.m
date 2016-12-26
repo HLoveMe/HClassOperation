@@ -9,10 +9,13 @@
 #import "HGMethod.h"
 
 @implementation HGMethod
--(NSMutableArray *)pars{
-    if(_pars==nil){
-        _pars = [NSMutableArray array];
+-(NSMutableArray *)blocks{
+    if (nil==_blocks) {
+        _blocks=[NSMutableArray array];
     }
-    return _pars;
+    return _blocks;
 }
+@end
+@implementation HM : NSObject
+
 @end

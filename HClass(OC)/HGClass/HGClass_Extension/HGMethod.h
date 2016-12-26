@@ -7,22 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef void(^BeforMethod)(NSMutableArray *pars);
+#import <objc/runtime.h>
+typedef void(^BeforMethod)(NSArray *pars);
 typedef void(^AfterMethod)();
 @interface HGMethod : NSObject
 //监听的sel
 @property(nonatomic,assign)SEL asel;
+
 @property(nonatomic,assign)BeforMethod before;
+
 @property(nonatomic,assign)AfterMethod after;
+
+@property(nonatomic,strong)NSMutableArray *blocks;
 //调用的参数
-@property(nonatomic,strong)NSMutableArray *pars;
+@property(nonatomic,assign)Method selfMethod;
+//替换的IMP
+@property(nonatomic,assign)IMP selfIMP;
 //调用结果
 @property(nonatomic,strong)id result;
 
-//交换之后的sel
-@property(nonatomic,assign)SEL bsel;
-//交换之前的方法签名
-@property(nonatomic,strong)NSMethodSignature *trueSig;
-
-
+@end
+@interface HM:NSObject
+@property(nonatomic,assign)BeforMethod before;
+@property(nonatomic,assign)AfterMethod after;
 @end
