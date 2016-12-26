@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB0C9CBA1E10B6720010DC50 /* HGBlackBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C9CB91E10B6720010DC50 /* HGBlackBox.m */; };
 		DB497FC71CB601EA00DF23E3 /* UITableView+HTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DB497FC61CB601EA00DF23E3 /* UITableView+HTable.m */; };
 		DB74210B1DEC817C00501C32 /* HGMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7420FD1DEC817C00501C32 /* HGMethod.m */; };
 		DB74210C1DEC817C00501C32 /* HGProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7420FF1DEC817C00501C32 /* HGProperty.m */; };
@@ -53,8 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB0C9CB81E10B6720010DC50 /* HGBlackBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGBlackBox.h; sourceTree = "<group>"; };
-		DB0C9CB91E10B6720010DC50 /* HGBlackBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBlackBox.m; sourceTree = "<group>"; };
 		DB497FC51CB601EA00DF23E3 /* UITableView+HTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HTable.h"; sourceTree = "<group>"; };
 		DB497FC61CB601EA00DF23E3 /* UITableView+HTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HTable.m"; sourceTree = "<group>"; };
 		DB7420FA1DEC817C00501C32 /* HGClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGClass.h; sourceTree = "<group>"; };
@@ -161,8 +158,6 @@
 				DB7421031DEC817C00501C32 /* NSObject+HAdd.m */,
 				DB74211C1DED284E00501C32 /* NSObject+Proxy.m */,
 				DB74211D1DED284E00501C32 /* NSObject+Proxy.h */,
-				DB0C9CB81E10B6720010DC50 /* HGBlackBox.h */,
-				DB0C9CB91E10B6720010DC50 /* HGBlackBox.m */,
 			);
 			path = HGClass_Extension;
 			sourceTree = "<group>";
@@ -413,7 +408,6 @@
 				DB74211E1DED284E00501C32 /* NSObject+Proxy.m in Sources */,
 				DB74210C1DEC817C00501C32 /* HGProperty.m in Sources */,
 				DBEFE2B51CB5ED8100465CAC /* TestModel.m in Sources */,
-				DB0C9CBA1E10B6720010DC50 /* HGBlackBox.m in Sources */,
 				DB74210B1DEC817C00501C32 /* HGMethod.m in Sources */,
 				DB98F8F31CB54520008C4A09 /* twoViewController.m in Sources */,
 				DB98F8A81CB5448D008C4A09 /* AppDelegate.m in Sources */,
